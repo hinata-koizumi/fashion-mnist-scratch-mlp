@@ -6,12 +6,19 @@
 - **LBスコア**: **0.9485**
 
 ## 概要
-
-今Lessonで学んだことを元に，MNISTのファッション版 (Fashion MNIST，クラス数10) を多層パーセプトロンによって分類してみましょう．
+MNISTのファッション版 (Fashion MNIST，クラス数10) を多層パーセプトロンによって分類．
 
 Fashion MNISTの詳細については以下のリンクを参考にしてください．
-
 Fashion MNIST: https://github.com/zalandoresearch/fashion-mnist
+
+## ルール
+
+- 訓練データは`x_train`，`t_train`，テストデータは`x_test`で与えられます．
+- 予測ラベルは one_hot表現ではなく0~9のクラスラベルで表してください．
+- 下のセルで指定されている`x_train`，`t_train`以外の学習データは使わないでください．
+- PyTorchを利用して構いません．
+- ただし，`torch.nn.Conv2d`のような高レベルのAPIは使用しないで下さい．具体的には，`nn.Parameter`, `nn.Module`, `nn.Sequential`以外のnn系のAPIです．使用した場合エラーになります．
+- `torchvision`等で既に実装されているモデルも使用しないで下さい．
 
 ## アプローチと工夫した点
 
@@ -33,7 +40,7 @@ Fashion MNIST: https://github.com/zalandoresearch/fashion-mnist
   - 例：アンサンブル手法
   - 例：最終的に、特性の異なる3つのモデル（例：ResNet, EfficientNet）の予測結果を加重平均しました。
 
-## 🛠️ 使用技術 (Tech Stack)
+## 使用技術 (Tech Stack)
 
 - Python [TBD: 3.x]
 - PyTorch [TBD: 1.x]
