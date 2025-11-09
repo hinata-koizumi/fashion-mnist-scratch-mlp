@@ -68,14 +68,13 @@ Fashion MNIST: https://github.com/zalandoresearch/fashion-mnist
 - 推論/保存
   - 上記を組み合わせたロジットからクラスを決定し、`data/output/submission.csv` に `label` 列・`id` インデックスで保存
 
-## 使用技術 (Tech Stack)
+## 使用技術
 
-- Python [TBD: 3.x]
-- PyTorch [TBD: 1.x]
-- Pandas / NumPy
-- Matplotlib / Seaborn
-- Scikit-learn
-- [TBD: もし使っていれば: Optuna, Albumentations など]
+- Python 3.9+
+- PyTorch（`torch.nn`, `torch.optim`, `torch.utils.data`）
+- NumPy
+- Pandas
+- Pillow (PIL)
 
 ## 実行方法
 
